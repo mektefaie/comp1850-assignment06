@@ -1,3 +1,9 @@
+/* 
+    COMP 1850: Assignment 6
+    author: Mahmoud Ektefaie
+    date: 12/06/2022  
+*/
+
 @charset "utf-8";
 
 /* ------ Browser Resets ------ */
@@ -20,7 +26,6 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.4;
   background-color: rgb(102, 0, 0);
-  /* background-color: rgb(203, 245, 255); */
 }
 
 img {
@@ -63,7 +68,6 @@ h5 {
 
 /* ==== Navbar ==== */
 nav {
-  /* margin: 0 1em; */
   display: flex;
   border-bottom: 1px solid #f4f4f4;
 }
@@ -97,11 +101,9 @@ nav ul li:first-child {
 /* ==== Covid-19 ==== */
 #covid-19 {
   height: 48px;
-  /* background-color: aqua; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 1em 0; */
   margin: 0 1em;
 }
 
@@ -129,7 +131,6 @@ nav ul li:first-child {
   height: 82px;
   background-color: #e5e5e5;
   margin-bottom: 2.5em;
-  /* margin: 0 1em; */
 }
 
 /* ==== Main ==== */
@@ -219,6 +220,15 @@ article.intro--7 div.body {
   grid-area: top8;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  display: block;
+}
+
 /* CBC NEWS */
 .cbc-news {
   padding: 1em 1em 2em;
@@ -297,7 +307,6 @@ article.news-4 div.body {
 #my-local a:active {
   color: #fff;
   background-color: #545454;
-  /* border: 1px solid #545454; */
 }
 
 .my-local {
@@ -580,7 +589,7 @@ footer ul li {
 }
 
 /* ========================================================== */
-/* Medium Breakpoint 1: 508px
+/* Breakpoint 1: 508px
 /* CBC News changes from 1 col to 2 col
 /* My Local changes from 1 col to 2 col 
 /* Live Radio input field moves up
@@ -629,7 +638,7 @@ footer ul li {
 }
 
 /* ============================================================= */
-/* Medium Breakpoint 2: 640px
+/* Breakpoint 2: 640px
 /* More from CBC changes from 1 col to 2 col
 /* ============================================================= */
 @media screen and (min-width: 640px) {
@@ -647,7 +656,7 @@ footer ul li {
   }
 }
 /* ============================================================= */
-/* Medium Breakpoint 3: 732px
+/* Breakpoint 3: 732px
 /* Top section changes from 1 col to 3 col
 /* ============================================================= */
 @media screen and (min-width: 732px) {
@@ -685,7 +694,7 @@ footer ul li {
 }
 
 /* ============================================================= */
-/* Medium Breakpoint 4: 856px
+/* Breakpoint 4: 856px
 /* More from CBC changes from 2 col to 3 col
 /* ============================================================= */
 @media screen and (min-width: 856px) {
@@ -701,7 +710,7 @@ footer ul li {
   }
 }
 /* ======================================================== */
-/* Wide 1 Breakpoint: 1001px
+/* Breakpoint 5: 1001px
 /* CBC News changes from 2 col to 4 col
 /* My Local changes from 2 col to 4 col
 /* Live Radio items all align horizontally
@@ -739,7 +748,7 @@ footer ul li {
 }
 
 /* ========================================================== */
-/* Wide Breakpoint 2: 1070px
+/* Breakpoint 6: 1070px
 /* Top section changes from 3 col to 4 col
 /* More from CBC changes from 3 col to 4 col
 /* ========================================================== */
