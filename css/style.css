@@ -1,0 +1,773 @@
+@charset "utf-8";
+
+/* ------ Browser Resets ------ */
+@import url('normalize.css');
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.4;
+  background-color: rgb(102, 0, 0);
+  /* background-color: rgb(203, 245, 255); */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+  color: #e60505;
+  text-transform: uppercase;
+}
+
+h5 {
+  margin-right: 1em;
+  text-align: right;
+  color: #464646;
+  font-size: 0.6rem;
+  font-weight: 200;
+}
+
+.wrapper {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.category {
+  color: #464646;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+/* ==== Navbar ==== */
+nav {
+  /* margin: 0 1em; */
+  display: flex;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+a img.cbc-logo {
+  height: 48px;
+  padding: 0.95em 10px;
+}
+
+nav ul {
+  flex: 1;
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  border-left: 1px solid #e60505;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 0 0.5em;
+  color: #545454;
+}
+
+nav ul li:first-child {
+  margin-right: auto;
+  text-transform: uppercase;
+  color: #e60505;
+  font-weight: 700;
+}
+
+/* ==== Covid-19 ==== */
+#covid-19 {
+  height: 48px;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 1em 0; */
+  margin: 0 1em;
+}
+
+#covid-19 span {
+  font-family: 'Odor Mean Chey', serif;
+  font-size: 1.2rem;
+  color: #e60505;
+  text-transform: uppercase;
+}
+
+#covid-19 a {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 0.5em 0.5em;
+}
+
+#covid-19 a:visited {
+  color: #000;
+}
+
+/* ==== Ad One ==== */
+#ad-one {
+  height: 82px;
+  background-color: #e5e5e5;
+  margin-bottom: 2.5em;
+  /* margin: 0 1em; */
+}
+
+/* ==== Main ==== */
+main {
+  flex: 1;
+}
+
+.intro {
+  margin: 1em;
+  display: grid;
+  grid-gap: 18px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'top1'
+    'top2'
+    'top3'
+    'top4'
+    'top5'
+    'top6'
+    'top7'
+    'top8';
+}
+
+article.intro--1 div.body,
+article.intro--2 div.body,
+article.intro--3 div.body,
+article.intro--4 div.body,
+article.intro--5 div.body,
+article.intro--6 div.body,
+article.intro--7 div.body {
+  padding: 0 1em;
+}
+
+.intro--1,
+.intro--2,
+.intro--3,
+.intro--4,
+.intro--5,
+.intro--6,
+.intro--7,
+.intro--ad {
+  border: 1px solid #e5e5e5;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.intro--1:hover,
+.intro--2:hover,
+.intro--3:hover,
+.intro--4:hover,
+.intro--5:hover,
+.intro--6:hover,
+.intro--7:hover,
+.intro--ad:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #cbcbcb;
+}
+
+.intro--ad .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro--1 {
+  grid-area: top1;
+}
+.intro--2 {
+  grid-area: top2;
+}
+.intro--3 {
+  grid-area: top3;
+}
+.intro--4 {
+  grid-area: top4;
+}
+.intro--5 {
+  grid-area: top5;
+}
+.intro--6 {
+  grid-area: top6;
+}
+.intro--7 {
+  grid-area: top7;
+}
+.intro--ad {
+  grid-area: top8;
+}
+
+/* CBC NEWS */
+.cbc-news {
+  padding: 1em 1em 2em;
+  background-color: #e5e5e5;
+}
+
+.cbc-news--grid {
+  display: grid;
+  grid-gap: 18px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'news-1'
+    'news-2'
+    'news-3'
+    'news-4';
+}
+
+.news-1,
+.news-2,
+.news-3,
+.news-4 {
+  background-color: #fff;
+  border: 1px solid #cecece;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.news-1:hover,
+.news-2:hover,
+.news-3:hover,
+.news-4:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #e60505;
+}
+
+article.news-1 div.body,
+article.news-2 div.body,
+article.news-3 div.body,
+article.news-4 div.body {
+  padding: 0 1em;
+}
+
+/* My Local */
+#my-local {
+  display: flex;
+  align-items: center;
+  padding: 0.5em 0 1.5em;
+  color: #0550c8;
+}
+
+#my-local i {
+  color: #000;
+}
+
+#my-local span {
+  font-size: 1.1rem;
+  color: #0550c8;
+  letter-spacing: 1px;
+  margin-right: 2.5em;
+}
+
+#my-local a {
+  font-weight: 300;
+  text-decoration: none;
+  border: 1px solid #545454;
+  padding: 0.25em 0.5em;
+}
+
+#my-local a:link,
+#my-local a:visited {
+  color: #0550c8;
+}
+
+#my-local a:hover,
+#my-local a:focus,
+#my-local a:active {
+  color: #fff;
+  background-color: #545454;
+  /* border: 1px solid #545454; */
+}
+
+.my-local {
+  padding: 1em 1em 2em;
+}
+
+.my-local--grid {
+  display: grid;
+  grid-gap: 18px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'news-1'
+    'news-2'
+    'news-3'
+    'news-4';
+}
+
+.local-1,
+.local-2,
+.local-3,
+.local-4 {
+  border: 1px solid #cecece;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.local-1:hover,
+.local-2:hover,
+.local-3:hover,
+.local-4:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #cbcbcb;
+}
+
+article.local-1 div.body,
+article.local-2 div.body,
+article.local-3 div.body,
+article.local-4 div.body {
+  padding: 0 1em;
+}
+
+/* Live Radio */
+.live-radio {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: #eaeaea;
+  padding: 1em;
+}
+
+.select-region select {
+  width: 100%;
+  padding: 0.5em;
+  color: #606060;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.radio-one {
+  margin-bottom: 1em;
+}
+
+.cbc-listen {
+  width: 45%;
+  align-self: flex-end;
+}
+
+/* More from CBC */
+.more-from-cbc {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+}
+
+.more-news-1,
+.more-news-2,
+.more-news-3,
+.more-news-4,
+.more-news-5,
+.more-news-6,
+.more-news-7,
+.more-news-8,
+.more-news-9,
+.more-news-10,
+.more-news-11,
+.more-news-12,
+.more-news-13,
+.more-news-14,
+.more-news-15,
+.more-news-16 {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #cecece;
+  padding: 1em;
+  margin-bottom: 1em;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.more-news-1:hover,
+.more-news-2:hover,
+.more-news-3:hover,
+.more-news-4:hover,
+.more-news-5:hover,
+.more-news-6:hover,
+.more-news-7:hover,
+.more-news-8:hover,
+.more-news-9:hover,
+.more-news-10:hover,
+.more-news-11:hover,
+.more-news-12:hover,
+.more-news-13:hover,
+.more-news-14:hover,
+.more-news-15:hover,
+.more-news-16:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px #cbcbcb;
+}
+
+.more-news-1 .body,
+.more-news-2 .body,
+.more-news-3 .body,
+.more-news-4 .body,
+.more-news-5 .body,
+.more-news-6 .body,
+.more-news-7 .body,
+.more-news-8 .body,
+.more-news-9 .body,
+.more-news-10 .body,
+.more-news-11 .body,
+.more-news-12 .body,
+.more-news-13 .body,
+.more-news-14 .body,
+.more-news-15 .body,
+.more-news-16 .body {
+  flex: 2;
+  padding-right: 0.25em;
+}
+
+.more-news-1 .image,
+.more-news-2 .image,
+.more-news-3 .image,
+.more-news-4 .image,
+.more-news-5 .image,
+.more-news-6 .image,
+.more-news-7 .image,
+.more-news-8 .image,
+.more-news-9 .image,
+.more-news-10 .image,
+.more-news-11 .image,
+.more-news-12 .image,
+.more-news-13 .image,
+.more-news-14 .image,
+.more-news-15 .image,
+.more-news-16 .image {
+  flex: 1;
+}
+
+.more-news-1 {
+  grid-area: more-news-1;
+}
+.more-news-2 {
+  grid-area: more-news-2;
+}
+.more-news-3 {
+  grid-area: more-news-3;
+}
+.more-news-4 {
+  grid-area: more-news-4;
+}
+.more-news-5 {
+  grid-area: more-news-5;
+}
+.more-news-6 {
+  grid-area: more-news-6;
+}
+.more-news-7 {
+  grid-area: more-news-7;
+}
+.more-news-8 {
+  grid-area: more-news-8;
+}
+.more-news-9 {
+  grid-area: more-news-9;
+}
+.more-news-10 {
+  grid-area: more-news-10;
+}
+.more-news-11 {
+  grid-area: more-news-11;
+}
+.more-news-12 {
+  grid-area: more-news-12;
+}
+.more-news-13 {
+  grid-area: more-news-13;
+}
+.more-news-14 {
+  grid-area: more-news-14;
+}
+.more-news-15 {
+  grid-area: more-news-15;
+}
+.more-news-16 {
+  grid-area: more-news-16;
+}
+
+.more-from-cbc--grid {
+  display: grid;
+  grid-gap: 18px;
+  grid-auto-rows: minmax(150px, auto);
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'more-news-1'
+    'more-news-2'
+    'more-news-3'
+    'more-news-4'
+    'more-news-5'
+    'more-news-6'
+    'more-news-7'
+    'more-news-8'
+    'more-news-9'
+    'more-news-10'
+    'more-news-11'
+    'more-news-12'
+    'more-news-13'
+    'more-news-14'
+    'more-news-15'
+    'more-news-16';
+}
+
+.more-from-cbc a:link,
+.more-from-cbc a:visited {
+  color: #545454;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 3px solid #545454;
+  padding: 0.5em 0.75em;
+  align-self: center;
+  margin-bottom: 3em;
+  text-decoration: none;
+}
+
+.more-from-cbc a:hover,
+.more-from-cbc a:focus,
+.more-from-cbc a:active {
+  color: #fff;
+  background-color: #545454;
+}
+
+/* ==== Footer ==== */
+footer {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 1em;
+}
+
+footer img {
+  width: 50%;
+  padding-left: 0.5em;
+}
+
+footer ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer ul li {
+  list-style: none;
+  padding: 0 0.5em;
+}
+
+/* ========================================================== */
+/* Medium Breakpoint 1: 508px
+/* CBC News changes from 1 col to 2 col
+/* My Local changes from 1 col to 2 col 
+/* Live Radio input field moves up
+/* ========================================================== */
+@media screen and (min-width: 508px) {
+  .cbc-news--grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'news-1 news-2'
+      'news-3 news-4';
+  }
+
+  .my-local--grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'news-1 news-2'
+      'news-3 news-4';
+  }
+
+  .live-radio {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .select-region {
+    padding: 0 0 0 1em;
+    flex: 1;
+  }
+
+  .select-region select {
+    margin: 0;
+  }
+
+  .radio-one {
+    margin: 0;
+    padding-top: 1em;
+    align-self: center;
+  }
+
+  .cbc-listen {
+    width: 40%;
+    margin-left: auto;
+    padding: 1em 0 0.5em;
+  }
+}
+
+/* ============================================================= */
+/* Medium Breakpoint 2: 640px
+/* More from CBC changes from 1 col to 2 col
+/* ============================================================= */
+@media screen and (min-width: 640px) {
+  .more-from-cbc--grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'more-news-1 more-news-2'
+      'more-news-3 more-news-4'
+      'more-news-5 more-news-6'
+      'more-news-7 more-news-8'
+      'more-news-9 more-news-10'
+      'more-news-11 more-news-12'
+      'more-news-13 more-news-14'
+      'more-news-15 more-news-16';
+  }
+}
+/* ============================================================= */
+/* Medium Breakpoint 3: 732px
+/* Top section changes from 1 col to 3 col
+/* ============================================================= */
+@media screen and (min-width: 732px) {
+  .intro--1 {
+    display: flex;
+    align-items: center;
+  }
+
+  .intro--1 .image {
+    width: 66%;
+  }
+
+  .intro--1 .body {
+    width: 33%;
+  }
+
+  .intro {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'top1 top1 top1'
+      'top2 top3 top4'
+      'top5 top6 top7'
+      'top8 top8 top8';
+  }
+
+  footer img {
+    width: 32%;
+    padding-left: 2em;
+  }
+
+  footer ul {
+    width: 60%;
+    justify-content: space-around;
+  }
+}
+
+/* ============================================================= */
+/* Medium Breakpoint 4: 856px
+/* More from CBC changes from 2 col to 3 col
+/* ============================================================= */
+@media screen and (min-width: 856px) {
+  .more-from-cbc--grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'more-news-1 more-news-2 more-news-3'
+      'more-news-4 more-news-5 more-news-6'
+      'more-news-7 more-news-8 more-news-9'
+      'more-news-10 more-news-11 more-news-12'
+      'more-news-13 more-news-14 more-news-15'
+      'more-news-16 more-news-16 more-news-16';
+  }
+}
+/* ======================================================== */
+/* Wide 1 Breakpoint: 1001px
+/* CBC News changes from 2 col to 4 col
+/* My Local changes from 2 col to 4 col
+/* Live Radio items all align horizontally
+/* ======================================================== */
+@media screen and (min-width: 1001px) {
+  .cbc-news--grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'news-1 news-2 news-3 news-4';
+  }
+
+  .my-local--grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'news-1 news-2 news-3 news-4';
+  }
+
+  .live-radio {
+    align-items: center;
+  }
+
+  .select-region {
+    padding: 0 1em;
+    width: 40%;
+  }
+
+  .radio-one {
+    width: 45%;
+    padding: 0 0.75em 0;
+  }
+
+  .cbc-listen {
+    align-self: center;
+    padding: 0;
+    width: 15%;
+  }
+}
+
+/* ========================================================== */
+/* Wide Breakpoint 2: 1070px
+/* Top section changes from 3 col to 4 col
+/* More from CBC changes from 3 col to 4 col
+/* ========================================================== */
+@media screen and (min-width: 1070px) {
+  .intro {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'top1 top1 top1 top8'
+      'top2 top3 top4 .'
+      'top5 top6 top7 .';
+  }
+
+  .more-from-cbc--grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      'more-news-1 more-news-2 more-news-3 more-news-4'
+      'more-news-5 more-news-6 more-news-7 more-news-8'
+      'more-news-9 more-news-10 more-news-11 more-news-12'
+      'more-news-13 more-news-14 more-news-15 more-news-16';
+  }
+
+  footer img {
+    width: 25%;
+    padding-left: 2em;
+  }
+
+  footer ul {
+    width: 70%;
+    justify-content: space-around;
+  }
+}
